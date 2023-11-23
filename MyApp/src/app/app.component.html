@@ -1,0 +1,171 @@
+<!--Navigation Bar-->
+<app-navbar></app-navbar>
+
+<!-- This is String Interpolation-->
+<h1 class="heading">{{title}} </h1>
+<app-login> </app-login>
+
+<!-- this is Function call and Make in Angular-->
+<h2 class="heading1"> Functions in Angular-</h2>
+<button style="background-color: #f371e8; color: #000;padding:5px; border: 2px solid #000" (click)="getName('Sanjana Agrawal','Tranzita_Systems')"> Click Me!</button>
+
+<!-- This is Events in Angular -->
+<h2 class="heading3"> {{ title1}}</h2>
+<button style="background-color: #71bff3; color: #000;padding:5px; border: 2px solid #000" (click)="getData('Hello Tranzita')"> Call Function-</button>
+<br/> <br/>
+<input type="text" #box (keyup)="getData(box.value)" placeholder="Event keyup"/>
+<br /> <br />
+<input type="text" #box1 (keydown)="getData(box1.value)" placeholder="Event keydown" />
+<br /> <br />
+<input type="text" #box2 (blur)="getData(box2.value)" placeholder="Event blur" />
+<br /> <br />
+<input type="text" #box3 (input)="getData(box3.value)" placeholder="Event input" />
+<h3 (mouseover)="getData('mouse over function')"> Hello Tranzita_Systems</h3>
+<h3 (mouseleave)="getData('mouse leave function')"> Hello this is mouse leave function</h3>
+
+<!-- This is Get Input Box Value and Display-->
+<h2 class="heading4">Get Input Box Value- </h2>
+<input type="text" 
+#box4 placeholder="Enter your Name" name="name"/>
+<button style="background-color: #71bff3; color: #000; padding:5px;border: 2px solid #000" (click)="getValue(box4.value)"> Click Me!</button>
+<p> Box value is: {{displayVal}} </p>
+
+
+<!--This is counter function in Angular-->
+<h2 class="heading5"> {{title2}} </h2>
+<button style="background-color: #71bff3; color: #000;padding:5px; border: 2px solid #000" (click)="counter('subtract')">--</button>
+<p>Count : {{count}}</p>
+<button style="background-color: #f371e8; color: #000;padding:5px; border: 2px solid #000" (click)="counter('add')">++</button>
+
+
+<!--Basic rule of style-->
+<h2 class="heading6"> Basic Styling in Angular-</h2>
+<p class="p1">Styling in Angular can be done by two methods-<br>
+    1. Inline Styling<br>
+    2. Global Styling </p>
+
+    
+    <!--This is Property Binding in Angular-->
+    <h2 class="heading7"> Property Binding in Angular-</h2>
+    <input type="text" name="user-name" value={{name}} >
+    <br/> <br/>
+    <input type="text" name="user-name" [value]=name>
+
+   
+    <!-- Use of if-else condition in Angular-->
+    <h2 class="heading8"> {{title3}}</h2>
+    <h3 *ngIf="show=='yes'; then ifBlock else elseBlock"> Hello Tranzita_Systems</h3>
+    <ng-template #ifBlock>
+        <h3> If-condition is Active</h3>
+        <p>This content is displayed when the condition is true.</p>
+    </ng-template>
+    <ng-template #elseBlock>
+        <h3> Else-condition is Active</h3>
+        <p>This content is displayed when the condition is false.</p>
+    </ng-template>
+
+    
+    <!--Using Multiple condition or else if-->
+    <h2 class="heading3"> {{title4}}</h2>
+    <ng-template [ngIf]="color==='green'">
+        <h3 style="color: green;">Green Color it is!</h3>
+    </ng-template>
+    <ng-template [ngIf]="color==='violet'">
+        <h3 style="color: rgb(225, 87, 225);">Violet Color it is!</h3>
+    </ng-template>
+    <ng-template [ngIf]="color==='crimson'">
+        <h3 style="color: crimson;">Crimson Color it is!</h3>
+    </ng-template>
+
+    
+    <!--Switch Case-->
+    <h2 class="heading5"> Switch Case in Angular!</h2>
+    <div [ngSwitch]="color1">
+        <h3 *ngSwitchCase="'blueviolet'" style="color:blueviolet;"> I'm switched to BLUEVIOLET Color</h3>
+        <h3 *ngSwitchCase="'green'" style="color:green;"> I'm switched to GREEN Color</h3>
+        <h3 *ngSwitchCase="'blue'" style="color:blue;"> I'mswitched to BLUE Color</h3>
+        <h3 *ngSwitchCase="'crimson'" style="color:crimson;">I'm switched to CRIMSON Color</h3>
+        <h3 *ngSwitchCase="'darkmagenta'" style="color:darkmagenta;"> I'm switched to DARKMAGENTA Color</h3>
+        <h3 *ngSwitchCase="'darkgreen'" style="color:darkgreen;"> I'm switched to DARKGREEN  Color</h3>
+        <h3 *ngSwitchDefault>This is the unknown color or the user input value is not identified</h3>
+    </div>
+
+    
+    <!--Loops in Angular-->
+    <!--Make Array-->
+    <!--Make Array of object-->
+    <!--Apply for Loop-->
+    <!--Apply Loop on Object's Array-->
+    <h2 class="heading3">Use of for Loop and Array in Angular- </h2>
+    <h3 *ngFor="let item of users">Name is: {{item}}</h3>
+    <h3 *ngFor="let item of userDetails">{{item.name}}--{{item.email}}--{{item.phone}}</h3>
+
+    
+<!--Working of Nested Loop-->
+    <h2 class="heading9"> Nested Loops in Angular-</h2>
+    <ul *ngFor="let user of user12">
+        <li><b>Name is:</b> {{user.name}}</li>
+        <li><b>Phone number is:</b> {{user.phone}}</li>
+        <li><b>Social Accounts used:</b></li>
+        <ul *ngFor="let account of user.socialAccounts">
+            <li>{{account}}</li>
+        </ul>
+    </ul>
+
+   
+    <!--Style Binding-->
+    <!-- Assuming 'color' is a property in your component class -->
+    <h2 [style.color]="color2" [style.backgroundColor]="bgColor">Style Binding in Angular-</h2>
+    <button style="background-color: #f371e8; color: #fff;padding:5px; border: 2px solid #000" (click)="updateColor()">Update Color</button>
+    <button style="background-color: #71f3f3; color: #000;padding:5px; border: 2px solid #000" (click)="resetDefault()">Reset Color</button>
+
+
+    <!--Basic Angular Form-->
+    <!--Make Simple Form-->
+    <!--Get Form Value Form-->
+    <!--Print value -->
+    <h2 class="heading3">Basic Forms in Angular-</h2>
+    <form #basicForm="ngForm" (ngSubmit)="getData2(basicForm.value)"
+        style="max-width: 400px; margin: auto; border: 1px solid #ddd; padding: 20px; border-radius: 5px;">
+        <label for="user"><b>User Name:</b></label>
+        <input type="text" id="user" ngModel name="user" placeholder="Enter User Name"
+            style="width: 100%; padding: 8px; margin-bottom: 15px; box-sizing: border-box;">
+    
+        <label for="email"><b>Email:</b></label>
+        <input type="email" id="email" ngModel name="email" placeholder="Enter User Email"
+            style="width: 100%; padding: 8px; margin-bottom: 15px; box-sizing: border-box;">
+    
+        <label for="password"><b>Password:</b></label>
+        <input type="password" id="password" ngModel name="password" placeholder="Enter User Password"
+            style="width: 100%; padding: 8px; margin-bottom: 15px; box-sizing: border-box;">
+    
+        <label for="phone"><b>Phone No:</b></label>
+        <input type="tel" id="phone" ngModel name="phone" placeholder="Enter User Phone No"
+            style="width: 100%; padding: 8px; margin-bottom: 15px; box-sizing: border-box;">
+    
+        <button
+            style="background-color: #f371e8; color: #fff; border: none; padding: 10px; width: 100%; cursor: pointer;">Register</button>
+    </form>
+    
+    <h4 style="margin-top: 20px;">The Registered values are:</h4>
+    <ul>
+        <li>User: {{userData.user}}</li>
+        <li>Email: {{userData.email}}</li>
+        <li>Password: {{userData.password}}</li>
+        <li>Phone No: {{userData.phone}}</li>
+    </ul>
+
+
+
+
+   
+   
+
+
+    
+
+    
+
+
+
+

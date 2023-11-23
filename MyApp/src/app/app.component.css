@@ -1,0 +1,53 @@
+.heading{
+    background-color: aliceblue;
+    color: blueviolet;
+    font-style: italic;
+}
+.heading1{
+    background-color: aliceblue;
+    color: rgb(220, 20, 173);
+    font-style: italic;
+}
+.heading3{
+    background-color: aliceblue;
+    color: darkmagenta;
+    font-style: italic;
+}
+.heading4{
+    background-color: aliceblue;
+    color: darkgreen;
+    font-style: italic;
+}
+.heading5 {
+    background-color: aliceblue;
+    color: darkblue;
+    font-style: italic;
+}
+.heading6 {
+    background-color: aliceblue;
+    color: maroon;
+    font-style: italic;
+}
+.p1{
+    color: black;
+}
+.heading7{
+    background-color: aliceblue;
+    color: brown;
+    font-style: italic;
+}
+.heading8{
+    background-color: aliceblue;
+    color: darkorchid;
+    font-style: italic;
+
+}
+.heading9{
+    background-color: aliceblue;
+    color: cadetblue;
+    font-style: italic;
+}
+.heading10{
+    background-color: blanchedalmond;
+    font-style: italic;
+}
