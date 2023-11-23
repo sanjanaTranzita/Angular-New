@@ -10,6 +10,7 @@ export class AppComponent {
   title = 'Hello! Welcome to Angular Tutorial!!!'
   title1 ='Important Events in Angular!'
 disable: any;
+rating:number=6;
   getData(val:string){
     console.warn(val)
   }
@@ -62,13 +63,22 @@ disable: any;
   }
   resetDefault(){
     this.color2='darkmagenta'
-    this.bgColor='alicebluec'
+    this.bgColor='aliceblue'
   }
   userData:any={};
   getData2(data:NgForm){
     console.warn(data)
     this.userData=data
   }
+  display =true;
+  textColor = '#000'; 
+
+  toggle() {
+    this.display = !this.display;
+    this.textColor = this.display ? 'rgb(129, 95, 160)':'#b873e6';
+  }
+  show1 = true;
+   
 }
 
 

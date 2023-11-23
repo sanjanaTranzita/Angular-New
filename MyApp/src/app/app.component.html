@@ -7,49 +7,53 @@
 
 <!-- this is Function call and Make in Angular-->
 <h2 class="heading1"> Functions in Angular-</h2>
-<button style="background-color: #f371e8; color: #000;padding:5px; border: 2px solid #000" (click)="getName('Sanjana Agrawal','Tranzita_Systems')"> Click Me!</button>
+<button style="background-color: #f371e8; color: #000;padding:5px; border: 2px solid #000;margin:10px" (click)="getName('Sanjana Agrawal','Tranzita_Systems')"> Click Me!</button><br/><br/>
 
 <!-- This is Events in Angular -->
 <h2 class="heading3"> {{ title1}}</h2>
-<button style="background-color: #71bff3; color: #000;padding:5px; border: 2px solid #000" (click)="getData('Hello Tranzita')"> Call Function-</button>
+<button style="background-color: #71bff3; color: #000;padding:5px; border: 2px solid #000;margin:10px" (click)="getData('Hello Tranzita')"> Call Function-</button>
 <br/> <br/>
-<input type="text" #box (keyup)="getData(box.value)" placeholder="Event keyup"/>
+<input type="text" #box (keyup)="getData(box.value)" placeholder="Event keyup"style="width: 300px; height: 24px;margin:10px;" />
 <br /> <br />
-<input type="text" #box1 (keydown)="getData(box1.value)" placeholder="Event keydown" />
+<input type="text" #box1 (keydown)="getData(box1.value)" placeholder="Event keydown"style="width: 300px; height: 24px;margin:10px;" />
 <br /> <br />
-<input type="text" #box2 (blur)="getData(box2.value)" placeholder="Event blur" />
+<input type="text" #box2 (blur)="getData(box2.value)" placeholder="Event blur" style="width: 300px; height: 24px;margin:10px;" />
 <br /> <br />
-<input type="text" #box3 (input)="getData(box3.value)" placeholder="Event input" />
-<h3 (mouseover)="getData('mouse over function')"> Hello Tranzita_Systems</h3>
-<h3 (mouseleave)="getData('mouse leave function')"> Hello this is mouse leave function</h3>
+<input type="text" #box3 (input)="getData(box3.value)" placeholder="Event input" style="width: 300px; height: 24px;margin:10px;"/>
+<h4 (mouseover)="getData('mouse over function')"> Hello Tranzita_Systems</h4>
+<h4 (mouseleave)="getData('mouse leave function')"> Hello this is mouse leave function</h4><br>
 
 <!-- This is Get Input Box Value and Display-->
 <h2 class="heading4">Get Input Box Value- </h2>
 <input type="text" 
-#box4 placeholder="Enter your Name" name="name"/>
-<button style="background-color: #71bff3; color: #000; padding:5px;border: 2px solid #000" (click)="getValue(box4.value)"> Click Me!</button>
+#box4 placeholder="Enter your Name" name="name" style="width: 300px; height: 24px;margin:10px;"/>
+<button style="background-color: #71bff3; color: #000; border: 2px solid #000; margin:10px" (click)="getValue(box4.value)"> Click Me!</button>
 <p> Box value is: {{displayVal}} </p>
-
+<br /><br />
 
 <!--This is counter function in Angular-->
 <h2 class="heading5"> {{title2}} </h2>
-<button style="background-color: #71bff3; color: #000;padding:5px; border: 2px solid #000" (click)="counter('subtract')">--</button>
-<p>Count : {{count}}</p>
-<button style="background-color: #f371e8; color: #000;padding:5px; border: 2px solid #000" (click)="counter('add')">++</button>
-
+<p><b>Decrement key:</b></p>
+<button style="background-color: #71bff3; color: #000; border: 2px solid #000;margin:10px;width: 50px; height: 24px" (click)="counter('subtract')">--</button>
+<p span style="font-weight: bold; color: #7faef0; border: 1px solid #1971ed; padding: 3px; width:80px;margin:10px">Count: {{ count }}</p>
+<p><b>Increment key:</b></p>
+<button style="background-color: #f371e8; color: #000; border: 2px solid #000;margin:10px;width: 50px; height: 24px" (click)="counter('add')">++</button>
+<br /><br />
 
 <!--Basic rule of style-->
 <h2 class="heading6"> Basic Styling in Angular-</h2>
 <p class="p1">Styling in Angular can be done by two methods-<br>
     1. Inline Styling<br>
     2. Global Styling </p>
+    <br /><br />
 
     
     <!--This is Property Binding in Angular-->
     <h2 class="heading7"> Property Binding in Angular-</h2>
-    <input type="text" name="user-name" value={{name}} >
+    <input type="text" name="user-name" value={{name}} style="width: 300px; height: 24px;margin:10px;" >
     <br/> <br/>
-    <input type="text" name="user-name" [value]=name>
+    <input type="text" name="user-name" [value]=name style="width: 300px; height: 24px;margin:10px;">
+    <br /><br />
 
    
     <!-- Use of if-else condition in Angular-->
@@ -63,6 +67,7 @@
         <h3> Else-condition is Active</h3>
         <p>This content is displayed when the condition is false.</p>
     </ng-template>
+    <br /><br />
 
     
     <!--Using Multiple condition or else if-->
@@ -76,6 +81,7 @@
     <ng-template [ngIf]="color==='crimson'">
         <h3 style="color: crimson;">Crimson Color it is!</h3>
     </ng-template>
+    <br /><br />
 
     
     <!--Switch Case-->
@@ -89,6 +95,7 @@
         <h3 *ngSwitchCase="'darkgreen'" style="color:darkgreen;"> I'm switched to DARKGREEN  Color</h3>
         <h3 *ngSwitchDefault>This is the unknown color or the user input value is not identified</h3>
     </div>
+    <br /><br />
 
     
     <!--Loops in Angular-->
@@ -99,6 +106,7 @@
     <h2 class="heading3">Use of for Loop and Array in Angular- </h2>
     <h3 *ngFor="let item of users">Name is: {{item}}</h3>
     <h3 *ngFor="let item of userDetails">{{item.name}}--{{item.email}}--{{item.phone}}</h3>
+    <br /><br />
 
     
 <!--Working of Nested Loop-->
@@ -111,14 +119,15 @@
             <li>{{account}}</li>
         </ul>
     </ul>
+    <br /><br />
 
    
     <!--Style Binding-->
     <!-- Assuming 'color' is a property in your component class -->
     <h2 [style.color]="color2" [style.backgroundColor]="bgColor">Style Binding in Angular-</h2>
-    <button style="background-color: #f371e8; color: #fff;padding:5px; border: 2px solid #000" (click)="updateColor()">Update Color</button>
-    <button style="background-color: #71f3f3; color: #000;padding:5px; border: 2px solid #000" (click)="resetDefault()">Reset Color</button>
-
+    <button style="background-color: #f371e8; color: #fff;padding:5px; border: 2px solid #000;width: 100px; height: 28px;margin:10px" (click)="updateColor()">Update Color</button>
+    <button style="background-color: #71f3f3; color: #000;padding:5px; border: 2px solid #000;width: 100px; height: 28px;margin:10px" (click)="resetDefault()">Reset Color</button>
+    <br /><br />
 
     <!--Basic Angular Form-->
     <!--Make Simple Form-->
@@ -127,21 +136,24 @@
     <h2 class="heading3">Basic Forms in Angular-</h2>
     <form #basicForm="ngForm" (ngSubmit)="getData2(basicForm.value)"
         style="max-width: 400px; margin: auto; border: 1px solid #ddd; padding: 20px; border-radius: 5px;">
+    
         <label for="user"><b>User Name:</b></label>
         <input type="text" id="user" ngModel name="user" placeholder="Enter User Name"
-            style="width: 100%; padding: 8px; margin-bottom: 15px; box-sizing: border-box;">
+            style="width: 100%; padding: 8px; margin-bottom: 15px; box-sizing: border-box;" required pattern="[A-Za-z]+">
     
         <label for="email"><b>Email:</b></label>
         <input type="email" id="email" ngModel name="email" placeholder="Enter User Email"
-            style="width: 100%; padding: 8px; margin-bottom: 15px; box-sizing: border-box;">
+            style="width: 100%; padding: 8px; margin-bottom: 15px; box-sizing: border-box;" required
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+
     
         <label for="password"><b>Password:</b></label>
         <input type="password" id="password" ngModel name="password" placeholder="Enter User Password"
-            style="width: 100%; padding: 8px; margin-bottom: 15px; box-sizing: border-box;">
+            style="width: 100%; padding: 8px; margin-bottom: 15px; box-sizing: border-box;" required minlength="8">
     
         <label for="phone"><b>Phone No:</b></label>
         <input type="tel" id="phone" ngModel name="phone" placeholder="Enter User Phone No"
-            style="width: 100%; padding: 8px; margin-bottom: 15px; box-sizing: border-box;">
+            style="width: 100%; padding: 8px; margin-bottom: 15px; box-sizing: border-box;" pattern="[0-9]{10}">
     
         <button
             style="background-color: #f371e8; color: #fff; border: none; padding: 10px; width: 100%; cursor: pointer;">Register</button>
@@ -153,7 +165,99 @@
         <li>Email: {{userData.email}}</li>
         <li>Password: {{userData.password}}</li>
         <li>Phone No: {{userData.phone}}</li>
-    </ul>
+    </ul><br /><br />
+
+    <!--Toggle Element-->
+    <!--Make HTML element and button-->
+    <!--Define and apply property and also update it-->
+    <h2 [style.color]="textColor" class="heading11">Toggle Element-</h2>
+
+    <button style="background-color: #71bff3; color: #000; padding: 5px; border: 2px solid #000;margin:10px" (click)="toggle()">Toggle
+        Button</button>
+    <div *ngIf="display" style="padding: 10px;">
+        <b>Heading Tag </b>- Hello I work in Tranzita_systems
+    </div><br /><br />
+
+    <!--Bootstrap- installing,checking changes and adding examples of Bootstrap-->
+    <h2 class="heading1" >Bootstrap in Angular-</h2>
+    <br/>
+    <ngb-alert type="custom" [dismissible]="false"><strong>Whoa!</strong> This is a custom alert.</ngb-alert><br />
+    <ngb-alert [dismissible]="false">
+        <strong>Warning!</strong> Better check yourself, you're not looking too good.
+    </ngb-alert><br />
+
+    <div class="row">
+        <div class="col-md-6">
+            <div ngbDropdown class="d-inline-block">
+                <button type="button" class="btn btn-outline-primary" id="dropdownBasic1" ngbDropdownToggle>
+                    Toggle dropdown
+                </button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic1">
+                    <button ngbDropdownItem>Display Item-1</button>
+                    <button ngbDropdownItem>Display Item-2</button>
+                    <button ngbDropdownItem>Display Item-3</button>
+                </div>
+            </div>
+        </div>
+    
+        <div class="col text-end">
+            <div ngbDropdown placement="top-end" class="d-inline-block">
+                <button type="button" class="btn btn-outline-primary" id="dropdownBasic2" ngbDropdownToggle>Toggle
+                    dropup</button>
+                <div ngbDropdownMenu aria-labelledby="dropdownBasic2">
+                    <button ngbDropdownItem>Item-1</button>
+                    <button ngbDropdownItem>Item-2</button>
+                    <button ngbDropdownItem>Item-3</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br/>
+    <h3 class="h3">Declarative Inline using Bootstrap-</h3>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6">
+                <h6 class="h6">Body only</h6>
+                <ngb-toast [autohide]="false" class="custom-toast">
+                    I am a simple static toast.
+                </ngb-toast>
+            </div>
+    
+            <div class="col-md-6">
+                <h6 class="h6 mt-4">With a text header</h6>
+                <ngb-toast *ngIf="show" header="Hello" [autohide]="false" (hidden)="show1=false" class="custom-toast">
+                    I am a simple static toast with a header.
+                </ngb-toast>
+            </div>
+        </div>
+    </div>
+    <br/>
+
+    <!--Installing Material UI-->
+    <h2 class="heading3"> Material UI Components-</h2>
+    
+
+
+
+   
+
+
+
+
+
+
+  
+
+
+    
+
+    
+    
+    
+
+
+
 
 
 

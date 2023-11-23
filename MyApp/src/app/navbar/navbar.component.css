@@ -11,7 +11,7 @@ nav img:hover {
 nav {
     background-color: blanchedalmond;
     transition: background-color 0.3s ease;
-    padding: 15px 20px;
+    padding: 10px 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -27,6 +27,8 @@ ul {
 ul li {
     display: inline-block;
     padding: 15px;
+    font-size: larger;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
 
 li a {
