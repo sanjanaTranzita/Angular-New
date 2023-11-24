@@ -170,13 +170,21 @@
     <!--Toggle Element-->
     <!--Make HTML element and button-->
     <!--Define and apply property and also update it-->
-    <h2 [style.color]="textColor" class="heading11">Toggle Element-</h2>
-
-    <button style="background-color: #71bff3; color: #000; padding: 5px; border: 2px solid #000;margin:10px" (click)="toggle()">Toggle
-        Button</button>
+    <h2 [style.color]="textColor" class="heading11" *ngIf="display">
+        Toggle Element-
+    </h2>
+    <mat-slide-toggle (change)="change($event)" [checked]="isDisplay()">
+        Toggle Me!
+    </mat-slide-toggle>
+    
+    <div *ngIf="show1 && display">
+        <p>This is a visible element</p>
+    </div>
+    
     <div *ngIf="display" style="padding: 10px;">
         <b>Heading Tag </b>- Hello I work in Tranzita_systems
     </div><br /><br />
+
 
     <!--Bootstrap- installing,checking changes and adding examples of Bootstrap-->
     <h2 class="heading1" >Bootstrap in Angular-</h2>
@@ -235,7 +243,103 @@
     <br/>
 
     <!--Installing Material UI-->
-    <h2 class="heading3"> Material UI Components-</h2>
+    <h2 class="heading3"> Material UI Components-</h2><br>
+    <div class="example-label"><b>Raised</b></div><br>
+    <div class="example-button-row">
+        <button mat-raised-button>Basic Buttons-</button>
+        <button mat-raised-button color="primary">Primary</button>
+        <button mat-raised-button color="accent">Accent</button>
+        <button mat-raised-button color="warn">Warn</button>
+        <button mat-raised-button disabled>Disabled</button>
+        <a mat-raised-button href="https://www.google.com/" target="_blank">Link</a>
+    </div>
+    <br/>
+
+<section>
+    <div class="example-label"><b>FAB Buttons-</b></div>
+    <div class="example-button-row">
+        <div class="example-flex-container">
+            <div class="example-button-container">
+                <button mat-fab color="primary" aria-label="Example icon button with a delete icon">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </div>
+            <div class="example-button-container">
+                <button mat-fab color="accent" aria-label="Example icon button with a bookmark icon">
+                    <mat-icon>bookmark</mat-icon>
+                </button>
+            </div>
+            <div class="example-button-container">
+                <button mat-fab color="warn" aria-label="Example icon button with a home icon">
+                    <mat-icon>home</mat-icon>
+                </button>
+            </div>
+            <div class="example-button-container">
+                <button mat-fab disabled aria-label="Example icon button with a heart icon">
+                    <mat-icon>favorite</mat-icon>
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+<br/>
+
+    <div class="demo-section">
+        <b>Icon with a badge</b>
+        <mat-icon matBadge="15" matBadgeColor="warn">home</mat-icon>
+        <!-- Include text description of the icon's meaning for screen-readers -->
+        <span class="cdk-visually-hidden">
+            Example with a home icon with overlaid badge showing the number 15
+        </span>
+    </div><br>
+    <div class="demo-section">
+        <b> with a badge on the left</b>
+        <button mat-raised-button color="primary" matBadge="8" matBadgePosition="before" matBadgeColor="accent">
+            Action
+        </button>
+    </div><br>
+    <h3 class="h3">Basic Datepicker in Material UI:</h3>
+    <mat-form-field>
+        <mat-label>Choose a date</mat-label>
+        <input matInput [matDatepicker]="picker">
+        <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field><br>
+
+    <h3 class="h3"> Static Chips implementation</h3>
+    <mat-chip-listbox aria-label="Fish selection">
+        <mat-chip-option>One fish</mat-chip-option>
+        <mat-chip-option>Two fish</mat-chip-option>
+        <mat-chip-option color="accent" selected>Accent fish</mat-chip-option>
+        <mat-chip-option color="warn">Warn fish</mat-chip-option>
+    </mat-chip-listbox><br>
+
+    <h3 class="h3">Tooltip Implementation-</h3>
+    <button mat-raised-button matTooltip="Info about the action"
+        aria-label="Button that displays a tooltip when focused or hovered over" class="attractive-button">
+        Action Button
+    </button>
+    <br><br>
+    <!--Make Todo List -->
+    <!--Make Textbox and button-->
+    <!--Show list of breaks-->
+    <!--Remove items from todo list-->
+    <h2 class="heading1"> Making Todo List-</h2>
+    <input type="text" placeholder="Enter New Task" #task/>
+    <br><br>
+    <button (click)="addTask(task.value)">Add Task</button>
+
+    <ul *ngFor="let item of list">
+        <li>{{item.name}} <button (click)="removeTask(item.id)">Remove</button></li>
+    </ul><br>
+    
+
+
+
+
+
+   
+
     
 
 

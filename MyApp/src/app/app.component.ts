@@ -70,15 +70,38 @@ rating:number=6;
     console.warn(data)
     this.userData=data
   }
-  display =true;
-  textColor = '#000'; 
+show1 = true;
+display:boolean =true;
+textColor = '#000'; 
+
+isDisplay() {
+    return this.display;
+  }
 
   toggle() {
     this.display = !this.display;
-    this.textColor = this.display ? 'rgb(129, 95, 160)':'#b873e6';
+    this.textColor = this.display ? 'rgb(129, 95, 160)' : '#b873e6';
   }
-  show1 = true;
-   
+
+  change(event: any) {
+    if (this.display) {
+      if (!event.checked && !confirm("Are you sure")) {
+        event.source.checked = true;
+        console.log("Toggle should not change if I click the cancel button");
+      } else {
+        console.log("Toggle");
+      }
+    }
+  }
+  list:any[]=[];
+  addTask(item:string){
+    this.list.push({id:this.list.length,name:item});
+    console.log(this.list)
+  }
+  removeTask(id:number){
+    console.warn(id)
+    this.list=this.list.filter(item=>item.id!==id)
+  }
 }
 
 
