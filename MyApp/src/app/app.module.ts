@@ -21,10 +21,13 @@ import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { HttpClientModule } from '@angular/common/http';
+import { TodolistComponent } from './todolist/todolist.component';
+
 @NgModule({
     declarations: [
         AppComponent,
         NavbarComponent,
+        TodolistComponent,
         
     ],
     providers: [],
@@ -50,6 +53,7 @@ import { HttpClientModule } from '@angular/common/http';
         MatDividerModule,
         MatTooltipModule,
         HttpClientModule,
+        
     ],
 })
 export class AppModule {}

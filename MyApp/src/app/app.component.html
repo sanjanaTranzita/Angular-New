@@ -297,14 +297,14 @@
         <button mat-raised-button color="primary" matBadge="8" matBadgePosition="before" matBadgeColor="accent">
             Action
         </button>
-    </div><br>
+    </div><br><br>
     <h3 class="h3">Basic Datepicker in Material UI:</h3>
     <mat-form-field>
         <mat-label>Choose a date</mat-label>
         <input matInput [matDatepicker]="picker">
         <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
         <mat-datepicker #picker></mat-datepicker>
-    </mat-form-field><br>
+    </mat-form-field><br><br>
 
     <h3 class="h3"> Static Chips implementation</h3>
     <mat-chip-listbox aria-label="Fish selection">
@@ -312,7 +312,7 @@
         <mat-chip-option>Two fish</mat-chip-option>
         <mat-chip-option color="accent" selected>Accent fish</mat-chip-option>
         <mat-chip-option color="warn">Warn fish</mat-chip-option>
-    </mat-chip-listbox><br>
+    </mat-chip-listbox><br><br>
 
     <h3 class="h3">Tooltip Implementation-</h3>
     <button mat-raised-button matTooltip="Info about the action"
@@ -324,14 +324,10 @@
     <!--Make Textbox and button-->
     <!--Show list of breaks-->
     <!--Remove items from todo list-->
-    <h2 class="heading1"> Making Todo List-</h2>
-    <input type="text" placeholder="Enter New Task" #task/>
-    <br><br>
-    <button (click)="addTask(task.value)">Add Task</button>
-
-    <ul *ngFor="let item of list">
-        <li>{{item.name}} <button (click)="removeTask(item.id)">Remove</button></li>
-    </ul><br>
+   <app-todolist>
+     </app-todolist>
+   
+    
     
 
 

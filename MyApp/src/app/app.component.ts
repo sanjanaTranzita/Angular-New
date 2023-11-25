@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -7,10 +7,12 @@ import { NgForm } from '@angular/forms';
   styleUrl: './app.component.css'
 })
 export class AppComponent {
+
   title = 'Hello! Welcome to Angular Tutorial!!!'
   title1 ='Important Events in Angular!'
 disable: any;
 rating:number=6;
+taskForm: any;
   getData(val:string){
     console.warn(val)
   }
@@ -93,16 +95,10 @@ isDisplay() {
       }
     }
   }
-  list:any[]=[];
-  addTask(item:string){
-    this.list.push({id:this.list.length,name:item});
-    console.log(this.list)
-  }
-  removeTask(id:number){
-    console.warn(id)
-    this.list=this.list.filter(item=>item.id!==id)
-  }
+ 
+
 }
+
 
 
 

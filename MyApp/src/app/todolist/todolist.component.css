@@ -1,0 +1,107 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #c9b4f3;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 150vh;
+}
+
+.container {
+    background-color: #F1EAFF;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    border-radius: 8px;
+    width: 900px;
+}
+
+h2 {
+    color: #7743DB;
+    font-family: cursive;
+}
+
+hr {
+    border-top: 2px solid #F875AA;
+    margin: 20px 0;
+}
+
+form {
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+label {
+    font-weight: bold;
+    color: #555;
+}
+
+input.form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#ErrorMessage {
+    font-size: 12px;
+}
+
+button.btn-primary {
+    background-color: #fff;
+    color: #7743DB;
+    border: 3px solid #7743DB;
+    border-radius: 4px;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+button.btn-primary:disabled {
+    background-color: #b3c6e7;
+    border: 1px solid #b3c6e7;
+    cursor: not-allowed;
+}
+
+table.table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th,
+td {
+    border: 1px solid #ced4da;
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #7743DB;
+    color: #fff;
+}
+
+tr:nth-child(even) {
+    background-color: #f8f9fa;
+}
+
+tr:hover {
+    background-color: #e2e6ea;
+}
+
+input[type="checkbox"] {
+    cursor: pointer;
+}
+
+button.btn-danger {
+    background-color: #ffff;
+    color: #dc3545;
+    border: 3px solid #dc3545;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
