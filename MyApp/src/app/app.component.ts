@@ -95,9 +95,14 @@ isDisplay() {
       }
     }
   }
- 
-
-}
+  data5=10;
+  updateChild(){
+    this.data5 =Math.floor( Math.random()*10)
+  }
+  updateData(item:string){
+    alert(item)
+  }
+ }
 
 
 

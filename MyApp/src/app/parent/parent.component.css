@@ -1,0 +1,25 @@
+#box {
+    width: 100px;
+    padding: 10px 10px;
+    margin-right: 10px;
+    margin-left: 50px;
+    border: 2px solid #7c0808;
+    border-radius: 4px;
+}
+
+#Parentbutton {
+    background-color: #fff;
+    color: #DA0C81;
+    border: none;
+    padding: 5px 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-left: 20px;
+    border: 2px solid #E95793;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+#Parentbutton:hover {
+    background-color: #e7fbf3;
+}
