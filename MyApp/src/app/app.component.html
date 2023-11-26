@@ -135,29 +135,52 @@
     <!--Print value -->
     <h2 class="heading3">Basic Forms in Angular-</h2>
     <form #basicForm="ngForm" (ngSubmit)="getData2(basicForm.value)"
-        style="max-width: 400px; margin: auto; border: 1px solid #ddd; padding: 20px; border-radius: 5px;">
-    
-        <label for="user"><b>User Name:</b></label>
-        <input type="text" id="user" ngModel name="user" placeholder="Enter User Name"
-            style="width: 100%; padding: 8px; margin-bottom: 15px; box-sizing: border-box;" required pattern="[A-Za-z]+">
-    
-        <label for="email"><b>Email:</b></label>
-        <input type="email" id="email" ngModel name="email" placeholder="Enter User Email"
-            style="width: 100%; padding: 8px; margin-bottom: 15px; box-sizing: border-box;" required
-            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+    style="max-width: 500px; margin: auto; border: 2px solid #ddd; padding: 20px; border-radius: 5px; background-color: #F2FFE9; ">
 
-    
-        <label for="password"><b>Password:</b></label>
-        <input type="password" id="password" ngModel name="password" placeholder="Enter User Password"
-            style="width: 100%; padding: 8px; margin-bottom: 15px; box-sizing: border-box;" required minlength="8">
-    
-        <label for="phone"><b>Phone No:</b></label>
-        <input type="tel" id="phone" ngModel name="phone" placeholder="Enter User Phone No"
-            style="width: 100%; padding: 8px; margin-bottom: 15px; box-sizing: border-box;" pattern="[0-9]{10}">
-    
-        <button
-            style="background-color: #f371e8; color: #fff; border: none; padding: 10px; width: 100%; cursor: pointer;">Register</button>
-    </form>
+    <label for="user"><b>User Name:</b></label>
+    <input type="text" id="user" ngModel name="user" placeholder="Enter User Name"
+        style="width: 100%; padding: 8px; margin-bottom: 15px; box-sizing: border-box;" required pattern="[A-Za-z]+">
+    <!-- Validation icon for user -->
+    <div *ngIf="basicForm.controls['user']?.invalid && basicForm.controls['user']?.touched"
+        style="color: #f00; margin-bottom: 10px;">
+        <i class="fa fa-times-circle"></i> Invalid User Name
+    </div>
+
+    <label for="email"><b>Email:</b></label>
+    <input type="email" id="email" ngModel name="email" placeholder="Enter User Email"
+        style="width: 100%; padding: 8px; margin-bottom: 15px; box-sizing: border-box;" required
+        pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}">
+    <!-- Validation icon for email -->
+    <div *ngIf="basicForm.controls['email']?.invalid && basicForm.controls['email']?.touched"
+        style="color: #f00; margin-bottom: 10px;">
+        <i class="fa fa-times-circle"></i> Invalid Email
+    </div>
+
+    <label for="password"><b>Password:</b></label>
+    <input type="password" id="password" ngModel name="password" placeholder="Enter User Password"
+        style="width: 100%; padding: 8px; margin-bottom: 15px; box-sizing: border-box;" required minlength="8">
+    <!-- Validation icon for password -->
+    <div *ngIf="basicForm.controls['password']?.invalid && basicForm.controls['password']?.touched"
+        style="color: #f00; margin-bottom: 10px;">
+        <i class="fa fa-times-circle"></i> Invalid Password
+    </div>
+
+    <label for="phone"><b>Phone No:</b></label>
+    <input type="tel" id="phone" ngModel name="phone" placeholder="Enter User Phone No"
+        style="width: 100%; padding: 8px; margin-bottom: 15px; box-sizing: border-box;" pattern="[0-9]{10};"required minlength="10">
+    <!-- Validation icon for phone -->
+    <div *ngIf="basicForm.controls['phone']?.invalid && basicForm.controls['phone']?.touched"
+        style="color: #f00; margin-bottom: 10px;">
+        <i class="fa fa-times-circle"></i> Invalid Phone No
+    </div>
+
+<button
+    style="background-color: #f371e8; color: #fff; border: none; padding: 10px; width: 50%; cursor: pointer; margin: auto; display: block;">
+    Register
+</button>
+
+</form>
+
     
     <h4 style="margin-top: 20px;">The Registered values are:</h4>
     <ul>
@@ -293,7 +316,7 @@
         </span>
     </div><br>
     <div class="demo-section">
-        <b> with a badge on the left</b>
+        <b> Icon with a badge on the left</b>
         <button mat-raised-button color="primary" matBadge="8" matBadgePosition="before" matBadgeColor="accent">
             Action
         </button>
@@ -319,13 +342,15 @@
         aria-label="Button that displays a tooltip when focused or hovered over" class="attractive-button">
         Action Button
     </button>
-    <br><br>
+    <br><br><hr>
     <!--Make Todo List -->
     <!--Make Textbox and button-->
     <!--Show list of breaks-->
     <!--Remove items from todo list-->
-   <app-todolist>
-     </app-todolist>
+   <app-todolist><h2 class="heading2">Todo List-</h2>
+     </app-todolist><hr>
+     <br><br>
+
    
     
     
