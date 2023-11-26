@@ -4,7 +4,7 @@ import { UserAuthModule } from './user-auth/user-auth.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule , ReactiveFormsModule} from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { NgbRatingModule } from '@ng-bootstrap/ng-bootstrap';
 import { RatingComponent } from './rating/rating.component';
@@ -53,6 +53,7 @@ import { TodolistComponent } from './todolist/todolist.component';
         MatDividerModule,
         MatTooltipModule,
         HttpClientModule,
+        ReactiveFormsModule
         
     ],
 })
