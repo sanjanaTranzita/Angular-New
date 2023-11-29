@@ -25,6 +25,8 @@ import { TodolistComponent } from './todolist/todolist.component';
 import { ChildComponent } from './child/child.component';
 import { ParentComponent } from './parent/parent.component';
 import { UsdInrPipe } from './pipes/usd-inr.pipe';
+import { RedElDirective } from './red-el.directive';
+
 
 @NgModule({
     declarations: [
@@ -34,6 +36,7 @@ import { UsdInrPipe } from './pipes/usd-inr.pipe';
         ChildComponent,
         ParentComponent,
         UsdInrPipe,
+        RedElDirective,
         
     ],
     providers: [],
