@@ -24,6 +24,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { TodolistComponent } from './todolist/todolist.component';
 import { ChildComponent } from './child/child.component';
 import { ParentComponent } from './parent/parent.component';
+import { UsdInrPipe } from './pipes/usd-inr.pipe';
 
 @NgModule({
     declarations: [
@@ -32,6 +33,7 @@ import { ParentComponent } from './parent/parent.component';
         TodolistComponent,
         ChildComponent,
         ParentComponent,
+        UsdInrPipe,
         
     ],
     providers: [],

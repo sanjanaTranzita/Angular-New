@@ -106,6 +106,11 @@ isDisplay() {
   name18:any;
   title21="Pipes in Angular!"
   today=Date();
+  users111={
+    name:'Sanjana',
+    age:22
+
+  }
  }
 
 

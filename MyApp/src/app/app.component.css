@@ -247,7 +247,113 @@ i {
      font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
      
  }
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 20px;
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
 
+.containerpipe {
+    max-width: 800px;
+    width: 100%;
+    border: 2px solid #C23373;
+    padding-left: 10px;
+    padding-right: 10px;
+}
 
+h2 {
+    margin: 10px;
+}
 
+h2,
+h3 {
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
 
+h2.style1,
+h2.style2,
+h2.style3 {
+    margin: 20px;
+}
+
+h2.style1 {
+    color: coral;
+    font-style: italic;
+}
+
+h2.style2 {
+    color: #7F669D;
+    font-weight: bold;
+}
+
+h2.style3 {
+    color: #71bff3;
+    font-style: italic;
+}
+
+h3 {
+    margin: 15px;
+}
+
+h3.style4,
+h3.style5,
+h3.style6,
+h3.style7,
+h3.style8,
+h3.style9,
+h3.style10,
+h3.style11 {
+    margin: 10px;
+}
+
+h3.style4 {
+    color: #ED5AB3;
+    letter-spacing: 1px;
+}
+
+h3.style5 {
+    color: #C780FA;
+    font-weight: bold;
+}
+
+h3.style6 {
+    color: #C07F00;
+    font-style: italic;
+}
+
+h3.style7 {
+    color: #7A3E65;
+    font-style: italic;
+    font-weight: bold;
+}
+
+h3.style8 {
+    color: #B46060;
+    font-weight: bold;
+}
+
+h3.style9 {
+    color: #AE445A;
+}
+
+h3.style10 {
+    color: #A8DF8E;
+    font-weight: bold;
+}
+h3.style11{
+    color: #29ADB2;
+    font-weight: 300%;
+}
+#dropdownBasic1{
+    margin-left: 400px;
+}
+#dropdownBasic2{
+    margin-right: 400px;
+}
