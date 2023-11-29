@@ -20,29 +20,29 @@
 <input type="text" #box2 (blur)="getData(box2.value)" placeholder="Event blur" style="width: 300px; height: 28px;margin:10px;" />
 <br /> <br />
 <input type="text" #box3 (input)="getData(box3.value)" placeholder="Event input" style="width: 300px; height: 24px;margin:10px;"/>
-<h4 (mouseover)="getData('mouse over function')"> Hello Tranzita_Systems</h4>
-<h4 (mouseleave)="getData('mouse leave function')"> Hello this is mouse leave function</h4><br>
+<h4 (mouseover)="getData('mouse over function')" style="margin-left: 20px;"> Hello Tranzita_Systems</h4>
+<h4 (mouseleave)="getData('mouse leave function')" style="margin-left: 20px;"> Hello this is mouse leave function</h4><br>
 
 <!-- This is Get Input Box Value and Display-->
 <h2 class="heading4">Get Input Box Value- </h2>
 <input type="text" 
 #box4 placeholder="Enter your Name" name="name" style="width: 300px; height: 30px;margin:10px;"/>
 <button style="background-color: #71bff3; color: #000; border: 2px solid #000; margin:10px;" (click)="getValue(box4.value)"> Click Me!</button>
-<p> Box value is: {{displayVal}} </p>
+<p style="margin-left: 20px;"> Box value is: {{displayVal}} </p>
 <br /><br />
 
 <!--This is counter function in Angular-->
 <h2 class="heading5"> {{title2}} </h2>
-<p><b>Decrement key:</b></p>
+<p style="margin-left: 20px;"><b>Decrement key:</b></p>
 <button style="background-color: #71bff3; color: #000; border: 2px solid #000;margin:10px;width: 50px; height: 28px" (click)="counter('subtract')">--</button>
 <p span style="font-weight: bold; color: #7faef0; border: 1px solid #1971ed; padding: 3px; width:80px;margin:10px">Count: {{ count }}</p>
-<p><b>Increment key:</b></p>
+<p style="margin-left: 20px;"><b>Increment key:</b></p>
 <button style="background-color: #f371e8; color: #000; border: 2px solid #000;margin:10px;width: 50px; height: 28px" (click)="counter('add')">++</button>
 <br /><br />
 
 <!--Basic rule of style-->
 <h2 class="heading6"> Basic Styling in Angular-</h2>
-<p class="p1">Styling in Angular can be done by two methods-<br>
+<p class="p1" style="margin-left: 20px;">Styling in Angular can be done by two methods-<br>
     1. Inline Styling<br>
     2. Global Styling </p>
     <br /><br />
@@ -60,12 +60,12 @@
     <h2 class="heading8"> {{title3}}</h2>
     <h3 *ngIf="show=='yes'; then ifBlock else elseBlock"> Hello Tranzita_Systems</h3>
     <ng-template #ifBlock>
-        <h3> If-condition is Active</h3>
-        <p>This content is displayed when the condition is true.</p>
+        <h3 style="margin-left: 20px;"> If-condition is Active</h3>
+        <p style="margin-left: 20px;">This content is displayed when the condition is true.</p>
     </ng-template>
     <ng-template #elseBlock>
-        <h3> Else-condition is Active</h3>
-        <p>This content is displayed when the condition is false.</p>
+        <h3 style="margin-left: 20px;"> Else-condition is Active</h3>
+        <p style="margin-left: 20px;">This content is displayed when the condition is false.</p>
     </ng-template>
     <br /><br />
 
@@ -93,7 +93,7 @@
         <h3 *ngSwitchCase="'crimson'" style="color:crimson;">I'm switched to CRIMSON Color</h3>
         <h3 *ngSwitchCase="'darkmagenta'" style="color:darkmagenta;"> I'm switched to DARKMAGENTA Color</h3>
         <h3 *ngSwitchCase="'darkgreen'" style="color:darkgreen;"> I'm switched to DARKGREEN  Color</h3>
-        <h3 *ngSwitchDefault>This is the unknown color or the user input value is not identified</h3>
+        <h3 *ngSwitchDefault  style="margin-left: 20px;">This is the unknown color or the user input value is not identified</h3>
     </div>
     <br /><br />
 
@@ -104,8 +104,9 @@
     <!--Apply for Loop-->
     <!--Apply Loop on Object's Array-->
     <h2 class="heading3">Use of for Loop and Array in Angular- </h2>
-    <h3 *ngFor="let item of users">Name is: {{item}}</h3>
-    <h3 *ngFor="let item of userDetails">{{item.name}}--{{item.email}}--{{item.phone}}</h3>
+    <h3 *ngFor="let item of users" style="margin-left: 20px;color:#D25380">Name is: {{item}}</h3>
+    <h3 *ngFor="let item of userDetails" style="margin-left: 20px;color:#739072">{{item.name}}--{{item.email}}--{{item.phone}}</h3>
+
     <br /><br />
 
     
@@ -353,12 +354,29 @@
 <div id="childContainer" class="container">
     <app-child [item]="data5"></app-child>
     <button id="updateChildButton" (click)="updateChild()">Update Child Component</button>
+    <br><br>
 </div>
-<br><br>
-<h2 id="dataHeading" class="heading3">Send Data child to Parent Component-</h2><br>
+<h2 id="dataHeading" class="heading3">CHILD TO PARENT-</h2><br>
 <div id="parentContainer" class="container">
 <app-parent (updateDataEvent)="updateData($event)"></app-parent>
 </div>
+<br><br>
+<!--Two-way Binding in Angular-->
+<h2 class="heading12">Two-way Binding process-</h2>
+<div class="input-container">
+    <input type="text" [(ngModel)]="name18" placeholder="Enter your data">
+    <br>
+    <h3 class="head3">{{name18}}</h3>
+</div>
+<br><br>
+<!--Pipes in Angular-->
+<h2 class="heading15">{{title21 | uppercase}}</h2>
+<h2 style="color: coral; font-style: italic;">{{title21 | lowercase}}</h2>
+<h2 style="color: black;">{{title21}}</h2>
+<h2 style="color: #71bff3;font-style: italic;">{{today |date:'fullDate'}}</h2>
+
+
+
 
 
 

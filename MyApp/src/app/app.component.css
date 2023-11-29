@@ -68,6 +68,20 @@
     margin: 10px;
 
 }
+.heading12{
+    background-color:#F2FFE9;
+    font-style: italic;
+    margin: 10px;
+    color: #557C55;
+
+}
+.heading15{
+    background-color: #F2FFE9;
+    color: #DB6B97;
+    font-style: italic;
+    margin: 10px;
+
+}
 .toggleButton {
     background-color: #71bff3;
     color: #000;
@@ -120,6 +134,7 @@ i {
 }
 .h3{
     margin-left: 10px;
+    color: palevioletred;
 }
 .example-button-row button,
 .example-button-row a {
@@ -205,6 +220,33 @@ i {
     max-width: 400px;
     max-height: 250px;
 }
+ .input-container {
+     display: flex;
+     align-items: center;
+     margin: 20px;
+     margin-left: 450px;
+ }
+
+ input {
+     padding: 10px;
+     border: 2px solid #557C55;
+     border-radius: 5px;
+     font-size: 16px;
+     transition: border-color 0.3s;
+ }
+
+ input:focus {
+     border-color: #557C55;
+     outline: none;
+ }
+
+ .head3 {
+     margin-left: 20px;
+     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+     color: #E95793;
+     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+     
+ }
 
 
 

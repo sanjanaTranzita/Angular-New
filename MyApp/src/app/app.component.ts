@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { of } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -102,6 +103,9 @@ isDisplay() {
   updateData(item:string){
     alert(item)
   }
+  name18:any;
+  title21="Pipes in Angular!"
+  today=Date();
  }
 
 
