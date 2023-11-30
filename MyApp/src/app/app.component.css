@@ -357,3 +357,37 @@ h3.style11{
 #dropdownBasic2{
     margin-right: 400px;
 }
+ .routing-box {
+     box-sizing: border-box;
+     width: 30%;
+     padding: 10px;
+     margin: 10px;
+     margin-left: 15px;
+     float: left;
+     border: 2px solid #818FB4;
+     border-radius: 5px;
+     cursor: pointer;
+ }
+
+ .component-routing {
+     background-color: #DDE6ED;
+ }
+
+ .navigation-routing {
+     background-color: rgb(212, 244, 180);
+     height: 138px;
+ }
+
+ .data-driven-routing {
+    background-color: #DDE6ED;
+    height: 138px;
+ }
+ .routing-box:hover {
+     transform: scale(1.05);
+ }
+ p {
+     color: #435585;
+ }
+ b{
+    color:#363062;
+ }
