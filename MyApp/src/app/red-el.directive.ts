@@ -10,7 +10,7 @@ export class RedElDirective {
     el.nativeElement.style.margin='15px';
     el.nativeElement.style.backgroundColor = '#C5FFF8'; 
     el.nativeElement.style.fontFamily = 'Arial, sans-serif'; 
-     el.nativeElement.style.fontWeight = ''; 
+     el.nativeElement.style.fontWeight = 'bold'; 
 
    }
 

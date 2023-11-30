@@ -3,8 +3,7 @@
 
 <!-- This is String Interpolation-->
 <h1 class="heading">{{title}} </h1>
-<app-login> </app-login>
-
+<app-login></app-login>
 <!-- this is Function call and Make in Angular-->
 <h2 class="heading1"> Functions in Angular-</h2>
 <button style="background-color: #f371e8; color: #000;padding:5px; border: 2px solid #000;margin:10px" (click)="getName('Sanjana Agrawal','Tranzita_Systems')"> Click Me!</button><br/><br/>
@@ -136,7 +135,7 @@
     <!--Print value -->
     <h2 class="heading3">Basic Forms in Angular-</h2>
     <form #basicForm="ngForm" (ngSubmit)="getData2(basicForm.value)"
-    style="max-width: 500px; margin: auto; border: 2px solid #ddd; padding: 20px; border-radius: 5px; background-color: #F2FFE9; ">
+    style="max-width: 500px; margin: auto; border: 2px solid #B07BAC; padding: 20px; border-radius: 5px; background-color: #F2FFE9; ">
 
     <label for="user"><b>User Name:</b></label>
     <input type="text" id="user" ngModel name="user" placeholder="Enter User Name"
@@ -176,12 +175,12 @@
     </div><br><br>
 
 <button
-    style="background-color: #f371e8; color: #fff; border: none; padding: 10px; width: 50%; cursor: pointer; margin: auto; display: block;">
+    style="color:#76056d; border:2px solid #B07BAC;background-color:#fff; padding: 10px; width: 50%; cursor: pointer; margin: auto; display: block;">
     Register
 </button>
 
 </form>
-    <h4 style="margin-top: 20px;">The Registered values are:</h4>
+    <h4 style="margin-top: 20px;margin-left:10px">The Registered values are:</h4>
     <ul>
         <li>User: {{userData.user}}</li>
         <li>Email: {{userData.email}}</li>
@@ -347,28 +346,8 @@
     <!--Show list of breaks-->
     <!--Remove items from todo list-->
    <app-todolist><h2 class="heading2">Todo List-</h2>
-     </app-todolist><hr>
+     </app-todolist><hr><br>
      
-
-<h2 class="heading3"> Pass Data child to component-</h2>
-<div id="childContainer" class="container">
-    <app-child [item]="data5"></app-child>
-    <button id="updateChildButton" (click)="updateChild()">Update Child Component</button>
-    <br><br>
-</div>
-<h2 id="dataHeading" class="heading3">CHILD TO PARENT-</h2><br>
-<div id="parentContainer" class="container">
-<app-parent (updateDataEvent)="updateData($event)"></app-parent>
-</div>
-<br><br>
-<!--Two-way Binding in Angular-->
-<h2 class="heading12">Two-way Binding process-</h2>
-<div class="input-container">
-    <input type="text" [(ngModel)]="name18" placeholder="Enter your data">
-    <br>
-    <h3 class="head3">{{name18}}</h3>
-</div>
-<br><br>
 <!--Pipes in Angular-->
 <body>
 <div class="containerpipe">
@@ -413,9 +392,25 @@ For example- ngClass, ngStyle</p>
 <p>2-<b appRedEl>Structural Directive-</b> are used to change the DOM layout.<br>
     For example- ngFor, ngIf, ngSwitch</p>
 <p>3-<b appRedEl>Component Directive-</b> are used to create reusable components that can be added to other components.<br>
-    For example- Highlighter, Dropdown</p>
+    For example- Highlighter, Dropdown</p><br>
 
-    <!--Routing in Angular-->
+<!--Routing in Angular-->
+<h2 style="color:#D25380; background-color:beige;text-align:center">ROUTING AND IT'S TYPES</h2>
+<p style="margin-left:15px;">Routing in Angular is a mechanism that allows users to navigate between different views of an application.<br> It is a core
+    feature of Angular that enables the creation of Single Page Applications.</p>
+    <p style="margin: 10px;">There are three types of routing in Angular:<br>
+    1.<b style="background-color: beige;">Component-based routing:</b>
+    This is the most common type of routing and is used to navigate between different components. When a user clicks on a
+    link, the router navigates to the corresponding component and displays its view.<br>
+    2.<b style="background-color: rgb(212, 244, 180);">Navigation-based routing:</b>
+    This type of routing is used to navigate between different views of the same component.When a user clicks on an item in
+    the list, the router navigates to the details view of that item.<br>
+    3.<b style="background-color: cornsilk;">Data-driven routing:</b>
+    This type of routing is used to navigate based on the data in the application.</p>
+    <br><br>
+
+    
+
 
 
 

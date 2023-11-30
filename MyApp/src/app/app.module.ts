@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { UserAuthModule } from './user-auth/user-auth.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -26,6 +25,11 @@ import { ChildComponent } from './child/child.component';
 import { ParentComponent } from './parent/parent.component';
 import { UsdInrPipe } from './pipes/usd-inr.pipe';
 import { RedElDirective } from './red-el.directive';
+import { AboutComponent } from './about/about.component';
+import { HomeComponent } from './home/home.component';
+import { UserComponent } from './user/user.component';
+import { ContactComponent } from './contact/contact.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -37,6 +41,11 @@ import { RedElDirective } from './red-el.directive';
         ParentComponent,
         UsdInrPipe,
         RedElDirective,
+        AboutComponent,
+        HomeComponent,
+        UserComponent,
+        ContactComponent,
+        LoginComponent,
         
     ],
     providers: [],
@@ -44,7 +53,6 @@ import { RedElDirective } from './red-el.directive';
     imports: [
         BrowserModule,
         AppRoutingModule,
-        UserAuthModule,
         FormsModule,
         NgbModule,
         NgbRatingModule,
@@ -62,8 +70,7 @@ import { RedElDirective } from './red-el.directive';
         MatDividerModule,
         MatTooltipModule,
         HttpClientModule,
-        ReactiveFormsModule
-        
+        ReactiveFormsModule,
     ],
 })
 export class AppModule {}
