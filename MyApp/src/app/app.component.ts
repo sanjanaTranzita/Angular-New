@@ -54,7 +54,6 @@ taskForm: any;
     { name: 'Ankita Jaiswal',phone: '1111',socialAccounts:['Youtube','instagram','Hotmail']},
     { name: 'Abhi Saxena',phone: '1212',socialAccounts:['facebook','Hotmail','Gmail']},
     { name: 'Ranjeet Singh',phone: '2121',socialAccounts:['facebook','snapchat','Youtube']},
-    { name: 'Ashutosh Nishad',phone: '9898',socialAccounts:['Snapchat','instagram','Gmail']},
   ];
   color2='darkmagenta';
   bgColor='aliceblue';

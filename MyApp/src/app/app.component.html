@@ -105,20 +105,28 @@
     <h2 class="heading3">Use of for Loop and Array in Angular- </h2>
     <h3 *ngFor="let item of users" style="margin-left: 20px;color:#D25380">Name is: {{item}}</h3>
     <h3 *ngFor="let item of userDetails" style="margin-left: 20px;color:#739072">{{item.name}}--{{item.email}}--{{item.phone}}</h3>
-
     <br /><br />
 
     
 <!--Working of Nested Loop-->
     <h2 class="heading9"> Nested Loops in Angular-</h2>
-    <ul *ngFor="let user of user12">
-        <li><b>Name is:</b> {{user.name}}</li>
-        <li><b>Phone number is:</b> {{user.phone}}</li>
-        <li><b>Social Accounts used:</b></li>
-        <ul *ngFor="let account of user.socialAccounts">
-            <li>{{account}}</li>
-        </ul>
-    </ul>
+<div class="container mx-auto my-4 flex space-x-2">
+
+    <ng-container *ngFor="let user of user12">
+        <div class="p-4 border rounded-md shadow-md">
+            <ul style="background-color: #E5D4FF;">
+                <li><b>Name is:</b> {{ user.name }}</li>
+                <li><b>Phone number is:</b> {{ user.phone }}</li>
+                <li><b>Social Accounts used:</b></li>
+                <ul>
+                    <li *ngFor="let account of user.socialAccounts">{{ account }}</li>
+                </ul>
+            </ul>
+        </div>
+    </ng-container>
+
+</div>
+
     <br /><br />
 
    
@@ -387,38 +395,50 @@ This directive is used to set the CSS styles of an element based on dynamic data
 5. <b appRedEl>ngClass:</b>
 This directive is used to add or remove CSS classes from an element based on dynamic data.</p>
 <h4 style="color: darkorange; margin-left:10px"><b> Types of Directives-</b></h4><br>
-<p>1-<b appRedEl>Attribute Directive-</b> are used to change the appearance or behavior of an element.<br>
-For example- ngClass, ngStyle</p>
-<p>2-<b appRedEl>Structural Directive-</b> are used to change the DOM layout.<br>
-    For example- ngFor, ngIf, ngSwitch</p>
-<p>3-<b appRedEl>Component Directive-</b> are used to create reusable components that can be added to other components.<br>
-    For example- Highlighter, Dropdown</p><br>
+<div class="container mx-auto my-4 space-x-2">
+        <div class="p-2 border rounded-md shadow-md ">
+            <p class="text-lg font-bold mb-2"><b style="color: #D25380;font-size:25px">Attribute Directive</b></p>
+            <p style="background-color: #FAF3F0;font-style:italic">They are used to change the appearance or behavior of an element.</p>
+            <p style="background-color: #FAF3F0;font-style:italic">For example - ngClass, ngStyle</p>
+        </div>
 
-<!--Routing in Angular-->
+        <div class="p-2 border rounded-md shadow-md">
+            <p><b style="color: #D25380;font-size:25px">Structural Directive</b></p>
+            <p style="background-color: #FAF3F0;font-style:italic">They are used to change the DOM layout.</p>
+            <p style="background-color: #FAF3F0;font-style:italic">For example - ngFor, ngIf, ngSwitch</p>
+        </div>
+
+        <div class="p-2 border rounded-md shadow-md">
+            <p class="text-lg font-bold mb-2"><b style="color: #D25380;font-size:25px">Component Directive</b></p>
+            <p style="background-color: #FAF3F0;font-style:italic">They are used to create reusable components that can be added to other components.</p>
+            <p style="background-color: #FAF3F0;font-style:italic">For example - Highlighter, Dropdown</p>
+        </div>
+</div><br>
+
+        <!--Routing in Angular-->
 <h2 style="color:#D25380; background-color:beige;text-align:center">ROUTING AND IT'S TYPES</h2>
 <p style="margin-left:15px;">Routing in Angular is a mechanism that allows users to navigate between different views of an application.<br> It is a core
     feature of Angular that enables the creation of Single Page Applications.</p>
     <p style="margin: 10px;">There are three types of routing in Angular:<br>
         <div class="routing-box component-routing">
-            <b>Component-based routing:</b>
+            <b style="font-size:20px">Component-based routing:</b>
             <p>This is the most common type of routing and is used to navigate between different components. When a user clicks
-                on a
-                link, the router navigates to the corresponding component and displays its view.</p>
+                on a link, the router navigates to the corresponding component and displays its view.</p>
         </div>
         
         <div class="routing-box navigation-routing">
-            <b>Navigation-based routing:</b>
+            <b style="font-size:20px">Navigation-based routing:</b>
             <p>This type of routing is used to navigate between different views of the same component. When a user clicks on an
-                item in
-                the list, the router navigates to the details view of that item.</p>
+                item in the list, the router navigates to the details view of that item.</p>
         </div>
         
         <div class="routing-box data-driven-routing">
-            <b>Data-driven routing:</b>
+            <b style="font-size:20px">Data-driven routing:</b>
             <p>This type of routing is used to navigate based on the data in the application.</p>
-        </div>
-   <br><br>
-   
+        </div><br>
+        <h2 style="color:#84418f; background-color:#FFF5C2;text-align:center">SERVICES</h2>
+
+        
 
     
 
