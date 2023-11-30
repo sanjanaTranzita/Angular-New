@@ -88,7 +88,7 @@ isDisplay() {
 
   change(event: any) {
     if (this.display) {
-      if (!event.checked && !confirm("Are you sure")) {
+      if (!event.checked && !confirm("Are you sure?")) {
         event.source.checked = true;
         console.log("Toggle should not change if I click the cancel button");
       } else {
