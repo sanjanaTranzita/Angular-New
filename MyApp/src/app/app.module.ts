@@ -30,6 +30,7 @@ import { HomeComponent } from './home/home.component';
 import { UserComponent } from './user/user.component';
 import { ContactComponent } from './contact/contact.component';
 import { LoginComponent } from './login/login.component';
+import { EInfoComponent } from './e-info/e-info.component';
 
 
 @NgModule({
@@ -46,6 +47,7 @@ import { LoginComponent } from './login/login.component';
         UserComponent,
         ContactComponent,
         LoginComponent,
+        EInfoComponent,
         
     ],
     providers: [],
