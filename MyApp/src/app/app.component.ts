@@ -1,14 +1,16 @@
-import { Component,OnInit, OnDestroy, SimpleChanges } from '@angular/core';
+import { Component, OnInit, OnDestroy, SimpleChanges, Pipe } from '@angular/core';
 import { NgForm } from '@angular/forms';
 import { UsersDataService } from './services/users-data.service';
-import { of } from 'rxjs';
+import { filter, from, map, of } from 'rxjs';
+import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
 
   title = 'Hello! Welcome to Angular Tutorial!!!'
   title1 ='Important Events in Angular!'
@@ -125,9 +127,6 @@ OnSubmit456(input: HTMLInputElement): void {
 ngOnChanges(changes: SimpleChanges) {
     console.log('ngOnChanges called', changes);
 }
-ngOnInit() {
-    console.log('ngOnInit called');
-}
 ngAfterViewInit() {
     console.log('ngAfterViewInit called');
 }
@@ -156,6 +155,41 @@ ngOnDestroy() {
     console.log('onDelete called');
     this.ngOnDestroy();
   }
+  //myObservable = new Observable((observer)=>{
+    //console.log('Observable Starts')
+    //setTimeout(()=>{observer.next("1")},1000)
+    //setTimeout(()=>{observer.next("2")},2000)
+    //setTimeout(()=>{observer.next("3")},3000)
+    //setTimeout(()=>{observer.error(new Error('Something went wrong! Try again later'))},3000)
+    //setTimeout(()=>{observer.next("4")},4000)
+    //setTimeout(()=>{observer.next("5")},5000)
+    //setTimeout(()=>{observer.complete()},7000)
+    //observer.next('1')
+    //observer.next('2')
+    //observer.next('3')
+    //observer.next('4')
+    //observer.next('5')
+  //});
+    Array1 =[2,4,6,8,10];
+    Array2 = ['A','B','C'];
+    //myObservable = of(this.Array1, this.Array2, 44,69,'Sanjana');
+    myObservable = from(this.Array1);
+    transformedObs = this.myObservable.pipe(map((val) =>{
+      return val*5;
+    }))
+    filterededObs = this.transformedObs.pipe(filter((val) =>{
+      return val >=30;
+    }))
+
+    ngOnInit() {
+    this.filterededObs.subscribe((val)=>{
+      console.log(val);
+    },(error) =>{
+      alert(error.message);
+    }, () =>{
+      alert('Observable has completed emitting all the values.')
+    });
+    }
 }
 
 
