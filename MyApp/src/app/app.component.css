@@ -390,3 +390,43 @@ h3.style11{
  b{
     color:#363062;
  }
+  #uniqueInput {
+      width: 10%;
+      padding: 8px;
+      margin: 10px;
+      box-sizing: border-box;
+      margin-left:20px;
+  }
+
+  #uniqueButton {
+      background-color: #6fc972;
+      color: white;
+      padding: 10px 15px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+  }
+
+  #uniqueButton:hover {
+      background-color: #218e27;
+  }
+   #boxValue {
+       border: 2px solid #5C8374;
+       padding: 10px;
+       background-color: #bdded3;
+       margin: 10px;
+       margin-right: 1700px;
+
+    }
+    #deleteButton{
+        background-color: #6fc972;
+        color: white;
+        padding: 10px 15px;
+        margin-left: 15px;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    #deleteButton:hover {
+        background-color: #218e27;
+    }

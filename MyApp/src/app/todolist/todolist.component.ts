@@ -12,25 +12,37 @@ export class TodolistComponent implements OnInit {
   constructor(){ }
 
   ngOnInit(): void {
+    const storedTasks = localStorage.getItem('tasks');
+    this.taskArray = storedTasks ? JSON.parse(storedTasks) : [];
     
   }
    
   onSubmit(form:NgForm){
     console.log(form);
-    this.taskArray.push({
-      taskName:form.controls['task'].value,
-      isCompleted:false
-    })
+    const newTask = {
+      taskName: form.controls['task'].value,
+      isCompleted: false
+    };
+
+    // Add new task to the array
+    this.taskArray.push(newTask);
+
+    // Save the updated tasks array to local storage
+    localStorage.setItem('tasks', JSON.stringify(this.taskArray));
+
     form.reset();
   }
+
   onDelete(index:number){
     console.log(index);
     this.taskArray.splice(index,1);
+    localStorage.setItem('tasks', JSON.stringify(this.taskArray));
 
   }
   onCheck(index:number){
     console.log(this.taskArray);
     this.taskArray[index].isCompleted =! this.taskArray[index].isCompleted;
+    localStorage.setItem('tasks', JSON.stringify(this.taskArray));
   }
 
 }

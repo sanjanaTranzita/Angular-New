@@ -33,6 +33,7 @@ import { LoginComponent } from './login/login.component';
 import { EInfoComponent } from './e-info/e-info.component';
 
 
+
 @NgModule({
     declarations: [
         AppComponent,

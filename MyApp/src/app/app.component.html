@@ -439,6 +439,17 @@ This directive is used to add or remove CSS classes from an element based on dyn
         <h2 style="color:#84418f; background-color:#FFF5C2;text-align:center">SERVICES</h2>
         <app-e-info></app-e-info>
 
+    <br>
+    <h2 style="color:#D25380; background-color:#FFF5C2;text-align:center">Life Cycle Hooks</h2>
+    <div class="container123">
+        <input type="text"id="uniqueInput" #input>
+        <button id="uniqueButton" (click)="OnSubmit456(input)">Submit</button>
+        <button id="deleteButton" (click)="onDelete()">Delete</button>
+    </div>
+    <p id="boxValue" style="margin-left: 20px;"> The text you entered is: {{displayVal23}} </p>
+
+
+
         
 
     

@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component,OnInit, OnDestroy, SimpleChanges } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { UsersDataService } from './services/users-data.service';
 import { of } from 'rxjs';
 
 @Component({
@@ -14,6 +15,7 @@ export class AppComponent {
 disable: any;
 rating:number=6;
 taskForm: any;
+
   getData(val:string){
     console.warn(val)
   }
@@ -110,7 +112,51 @@ isDisplay() {
     age:22
 
   }
- }
+  users34: any;
+  constructor(private userData4:UsersDataService){
+    userData4.users().subscribe((data)=>this.users34=data);
+}
+inputText: string = ''; 
+OnSubmit456(input: HTMLInputElement): void {
+  const inputValue = input.value;
+  console.log('Input Value:', inputValue);
+}
+
+ngOnChanges(changes: SimpleChanges) {
+    console.log('ngOnChanges called', changes);
+}
+ngOnInit() {
+    console.log('ngOnInit called');
+}
+ngAfterViewInit() {
+    console.log('ngAfterViewInit called');
+}
+ngDoCheck() {
+    console.log('ngDoCheck called');
+}
+ngAfterContentInit() {
+    console.log('ngAfterContentInit called');
+}
+ngAfterContentChecked() {
+    console.log('ngAfterContentChecked called');
+}
+ngAfterViewChecked() {
+    console.log('ngAfterViewChecked called');
+}
+ngOnDestroy() {
+    console.log('ngOnDestroy called');
+}
+ displayVal23='';
+  getValue45(val:string)
+  {
+    this.displayVal23=val;
+    console.log(val)
+  }
+   onDelete(): void {
+    console.log('onDelete called');
+    this.ngOnDestroy();
+  }
+}
 
 
 

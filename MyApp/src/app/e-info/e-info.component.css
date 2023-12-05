@@ -40,6 +40,7 @@
     cursor: pointer;
     margin-left: 20px;
     margin-bottom: 10px;
+    margin-top: 10px;
 }
 
 .employee-button:hover {
@@ -51,12 +52,15 @@
     padding: 0;
     margin-bottom: 10px;
     margin-left: 20px;
-    margin-right: 1800px;
+    margin-right: 1700px;
 }
 
 .list-group-info {
     padding: 10px;
     background-color: #FED9ED;
     margin-bottom: 5px;
+    margin-left: 50px;
+    margin-top: 10px;
     border-radius: 4px;
+    font-style: italic;
 }
